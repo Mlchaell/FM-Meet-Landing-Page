@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap');
+
+:root {
+  /* COLORS */
+  --clr-primary-900: #28283D;
+  --clr-primary-800: #87879D;
+  --clr-primary-600: #855FB1;
+  --clr-primary-500: #4D96A9;
+  --clr-primary-100: #FAFAFA;
+
+  --clr-accent-100: #8FE3F9;
+  --clr-accent-200: #D9B8FF;
+
+  /* FONTS */
+  --ff-main: 'Red Hat Display';
+  --ff-backup: sans-serif;
+
+  --fw-bold: 700;
+  --fw-semi-bold: 500;
+  --fw-reg: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%; /* 1rem = 10px */
+  font-family: var(--ff-main), var(--ff-backup);
+  height: 100%;
+}
+
+body {
+  text-align: center;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/*************************/
+/* General Styling */
+
+.header {
+  display: grid;
+  place-content: center;
+  margin: 3rem 0;
+}
+
+.container {
+  margin: 0 2rem;
+}
+
+.mobile-hero {
+  margin-bottom: 3rem;
+}
+
+.downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modern {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/*************************/
+/* Footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  color: #fff;
+  background-color: var(--clr-primary-500);
+  mix-blend-mode: multiply;
+
+  position: relative;
+}
+
+.footer__h1 {
+  margin-top: 8rem;
+}
+
+.footer__btn {
+  align-self: center;
+}
+
+.footer img {
+  position: absolute;
+  z-index: -1;
+  opacity: .2;
+}
+
+/*************************/
+/* Typography Classes */
+
+.heading--h1 {
+  font-size: 5rem;
+  font-weight: var(--fw-bold);
+  line-height: 6.4rem;
+}
+
+.heading--h2 {
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+  line-height: 3.5rem;
+}
+
+.txt--body {
+  font-size: 1.5rem;
+  color: --clr-primary-800;
+  opacity: .5;
+  font-weight: var(--fw-semi-bold);
+  line-height: 2.6rem;
+}
+
+.footer .txt--body {
+  opacity: 1;
+}
+
+.txt--overline {
+  font-size: 1.6rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-500);
+  line-height: 2.6rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/*************************/
+/* Image Grids */
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+.img-grid img {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+/*************************/
+/* Buttons */
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+  font-weight: var(--fw-bold);
+  color: #fff;
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem 4rem;
+}
+
+.btn--purple { background-color: var(--clr-primary-600) }
+.btn--purple span { color: var(--clr-accent-200) }
+
+.btn--cyan { background-color: var(--clr-primary-500) }
+.btn--cyan span { color: var(--clr-accent-100) }
