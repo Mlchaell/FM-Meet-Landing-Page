@@ -308,8 +308,8 @@ h3 {
 .img-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  margin: 0 8rem;
+  gap: 1rem;
+  margin: 0 2rem;
   margin-top: 8rem;
   margin-bottom: 4rem;
 }
@@ -317,6 +317,14 @@ h3 {
 @media only screen and (min-width: 600px) {
   .img-grid {
     display: flex;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .img-grid {
+    gap: 3rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
 }
 
