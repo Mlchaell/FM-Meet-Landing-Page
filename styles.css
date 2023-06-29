@@ -23,6 +23,12 @@
   --info-max-width: 40ch;
 }
 
+@media only screen and (min-width: 1000px) {
+  :root {
+    --info-max-width: 50ch;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -229,21 +235,35 @@ h3 {
   color: var(--clr-primary-800);
   background-color: #fff;
 
-  border: 1px solid hsla(240, 10%, 57%, 0.5);
+  /* border: 1px solid hsla(240, 10%, 57%); */
+  border: 1px solid #87879D;
   border-radius: 100%;
   padding: 1rem;
   max-width: 5rem;
 
-  margin: 8rem auto;
-
   position: relative;
+}
+
+.circle-1 {
+  margin: 0 auto;
+  margin-top: 20rem;
+  margin-bottom: 10rem;
+}
+
+.circle-2 {
+  margin: 0 auto;
+  margin-top: 15rem;
+  margin-bottom: -2.6rem;
 }
 
 .circle::before {
   position: absolute;
   content: "";
-  border-left: 4px solid hsla(240, 10%, 57%, 0.5);
+  height: 10rem;
+  width: 1px;
+  border-left: 1px solid #87879D;
   border-radius: 1rem;
+  transform: translateY(-110%) translateX(850%);
 }
 
 /*************************/
